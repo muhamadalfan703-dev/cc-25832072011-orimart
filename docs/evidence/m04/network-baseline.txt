@@ -1,0 +1,54 @@
+=== HOST ===
+ Static hostname: cc-m03-25832072011
+       Icon name: computer-vm
+         Chassis: vm 🖴
+  Virtualization: amazon
+Operating System: Ubuntu 24.04.5 LTS
+          Kernel: Linux 7.0.0-1014-aws
+2
+               total        used        free      shared  buff/cache   available
+Mem:           909Mi       349Mi       362Mi       2.7Mi       306Mi       559Mi
+Swap:          1.0Gi          0B       1.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        19G  3.7G   15G  21% /
+ 03:04:35 up 52 min,  1 user,  load average: 0.00, 0.00, 0.00
+
+=== INTERFACE ===
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+ens5             UP             0a:ff:cb:1f:da:3b <BROADCAST,MULTICAST,UP,LOWER_UP> 
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens5             UP             172.31.28.10/20 metric 100 fe80::8ff:cbff:fe1f:da3b/64 
+
+=== ROUTE ===
+default via 172.31.16.1 dev ens5 proto dhcp src 172.31.28.10 metric 100 
+172.31.0.2 via 172.31.16.1 dev ens5 proto dhcp src 172.31.28.10 metric 100 
+172.31.16.0/20 dev ens5 proto kernel scope link src 172.31.28.10 metric 100 
+172.31.16.1 dev ens5 proto dhcp scope link src 172.31.28.10 metric 100 
+1.1.1.1 via 172.31.16.1 dev ens5 src 172.31.28.10 uid 1001 
+    cache 
+
+=== IPV6 ===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 state UNKNOWN qlen 1000
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 state UP qlen 1000
+    inet6 fe80::8ff:cbff:fe1f:da3b/64 scope link 
+       valid_lft forever preferred_lft forever
+
+=== SOCKETS ===
+Netid State  Recv-Q Send-Q     Local Address:Port Peer Address:PortProcess                                                     
+udp   UNCONN 0      0             127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=349,fd=16))                  
+udp   UNCONN 0      0          127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=349,fd=14))                  
+udp   UNCONN 0      0      172.31.28.10%ens5:68        0.0.0.0:*    users:(("systemd-network",pid=533,fd=23))                  
+udp   UNCONN 0      0              127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=695,fd=5))                           
+udp   UNCONN 0      0                  [::1]:323          [::]:*    users:(("chronyd",pid=695,fd=6))                           
+tcp   LISTEN 0      2048           127.0.0.1:8000      0.0.0.0:*    users:(("gunicorn",pid=843,fd=3),("gunicorn",pid=575,fd=3))
+tcp   LISTEN 0      4096           127.0.0.1:2019      0.0.0.0:*    users:(("caddy",pid=574,fd=3))                             
+tcp   LISTEN 0      4096             0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=932,fd=3),("systemd",pid=1,fd=87))      
+tcp   LISTEN 0      4096       127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=349,fd=15))                  
+tcp   LISTEN 0      4096          127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=349,fd=17))                  
+tcp   LISTEN 0      4096                [::]:22           [::]:*    users:(("sshd",pid=932,fd=4),("systemd",pid=1,fd=88))      
+tcp   LISTEN 0      4096                   *:80              *:*    users:(("caddy",pid=574,fd=6))                             
+
+=== PUBLIC IP ===
+3.106.220.4
