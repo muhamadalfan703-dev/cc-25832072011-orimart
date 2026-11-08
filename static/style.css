@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #faf7f2;
+  color: #222;
+}
+.hero {
+  background: #1f3a2e;
+  color: #fff;
+  padding: 48px 20px;
+  text-align: center;
+}
+.hero h1 { margin: 0 0 8px; font-size: 2.4rem; }
+.tagline { margin: 0 0 20px; opacity: 0.9; }
+.chips { list-style: none; padding: 0; margin: 0; display: flex;
+  gap: 10px; justify-content: center; flex-wrap: wrap; }
+.chips li { background: rgba(255,255,255,0.15); padding: 6px 14px;
+  border-radius: 999px; font-size: 0.9rem; }
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px; }
+.grid { display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.card { background: #fff; border: 1px solid #e5dfd3; border-radius: 12px;
+  padding: 16px; }
+.card h3 { margin: 10px 0 4px; font-size: 1.05rem; }
+.meta { color: #666; font-size: 0.9rem; margin: 0 0 8px; }
+.badge { display: inline-block; padding: 3px 10px; border-radius: 999px;
+  font-size: 0.8rem; font-weight: 700; }
+.badge.ori { background: #d9f2e1; color: #11632f; }
+.note { color: #666; font-size: 0.85rem; margin-top: 24px; }
+footer { text-align: center; padding: 20px; color: #888; font-size: 0.85rem; }
