@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ app_name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="hero">
+    <h1>{{ app_name }}</h1>
+    <p class="tagline">{{ tagline }}</p>
+    <ul class="chips">
+      {% for c in categories %}
+      <li>{{ c }}</li>
+      {% endfor %}
+    </ul>
+  </header>
+
+  <main>
+    <h2>Contoh Produk</h2>
+    <div class="grid">
+      {% for p in products %}
+      <article class="card">
+        <span class="badge ori">Ori</span>
+        <h3>{{ p.name }}</h3>
+        <p class="meta">{{ p.brand }}</p>
+        <p>Kondisi: {{ p.condition }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="note">Data contoh statis. Lencana "Ori" berarti lolos pemeriksaan
+    bukti sesuai checklist verifikasi, bukan jaminan mutlak.</p>
+  </main>
+
+  <footer>
+    <p>{{ app_name }} &middot; M03 &middot; env: {{ app_env }}</p>
+  </footer>
+</body>
+</html>
