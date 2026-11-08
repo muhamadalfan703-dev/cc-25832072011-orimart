@@ -1,0 +1,21 @@
+● cc-m03.service - PTI 2802 M03 OriMart Flask Application
+     Loaded: loaded (/etc/systemd/system/cc-m03.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-11-09 01:44:50 WIB; 12min ago
+   Main PID: 10987 (gunicorn)
+      Tasks: 3 (limit: 627)
+     Memory: 30.6M (peak: 31.1M)
+        CPU: 495ms
+     CGroup: /system.slice/cc-m03.service
+             ├─10987 /srv/cc-m03/.venv/bin/python /srv/cc-m03/.venv/bin/gunicorn --workers 1 --threads 2 --bind 127.0.0.1:8000 --timeout 30 --access-logfile - --error-logfile - app:app
+             └─10996 /srv/cc-m03/.venv/bin/python /srv/cc-m03/.venv/bin/gunicorn --workers 1 --threads 2 --bind 127.0.0.1:8000 --timeout 30 --access-logfile - --error-logfile - app:app
+
+Nov 09 01:44:50 cc-m03-25832072011 gunicorn[10996]: [2026-11-09 01:44:50 +0700] [10996] [INFO] Booting worker with pid: 10996
+Nov 09 01:44:50 cc-m03-25832072011 gunicorn[10987]: [2026-11-09 01:44:50 +0700] [10987] [ERROR] Control server error: [Errno 13] Permission denied: '/home/cloudstudent'
+Nov 09 01:45:45 cc-m03-25832072011 gunicorn[10996]: 127.0.0.1 - - [09/Nov/2026:01:45:45 +0700] "GET /health HTTP/1.1" 200 91 "-" "curl/8.5.0"
+Nov 09 01:47:21 cc-m03-25832072011 gunicorn[10996]: 127.0.0.1 - - [09/Nov/2026:01:47:21 +0700] "GET / HTTP/1.1" 200 1436 "-" "curl/8.5.0"
+Nov 09 01:47:21 cc-m03-25832072011 gunicorn[10996]: 127.0.0.1 - - [09/Nov/2026:01:47:21 +0700] "GET /health HTTP/1.1" 200 91 "-" "curl/8.5.0"
+Nov 09 01:49:06 cc-m03-25832072011 gunicorn[10996]: 127.0.0.1 - - [09/Nov/2026:01:49:06 +0700] "GET / HTTP/1.1" 200 1436 "-" "curl/8.5.0"
+Nov 09 01:49:06 cc-m03-25832072011 gunicorn[10996]: 127.0.0.1 - - [09/Nov/2026:01:49:06 +0700] "GET /health HTTP/1.1" 200 91 "-" "curl/8.5.0"
+Nov 09 01:50:08 cc-m03-25832072011 gunicorn[10996]: 127.0.0.1 - - [09/Nov/2026:01:50:08 +0700] "GET /health HTTP/1.1" 200 91 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; id-ID) WindowsPowerShell/5.1.26100.9549"
+Nov 09 01:50:21 cc-m03-25832072011 gunicorn[10996]: 127.0.0.1 - - [09/Nov/2026:01:50:21 +0700] "GET / HTTP/1.1" 200 1436 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; id-ID) WindowsPowerShell/5.1.26100.9549"
+Nov 09 01:50:43 cc-m03-25832072011 gunicorn[10996]: 127.0.0.1 - - [09/Nov/2026:01:50:43 +0700] "GET /health HTTP/1.1" 200 91 "-" "curl/8.21.0"
