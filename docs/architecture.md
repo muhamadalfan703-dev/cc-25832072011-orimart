@@ -67,3 +67,44 @@ flowchart TB
 - Deployment masih manual
 
 Keputusan teknis lengkap ada di docs/adr/0001-initial-architecture.md.
+
+## Deployment View v0.2 (M04)
+
+```mermaid
+flowchart TB
+    U[User Device]
+    DNS[DNS Resolver]
+    AUTH[Authoritative DNS]
+    SG[AWS Security Group]
+    UFW[UFW]
+    C[Caddy :80/:443]
+    G[Gunicorn 127.0.0.1:8000]
+    A[Flask]
+
+    U -->|DNS query| DNS
+    DNS --> AUTH
+    U -->|HTTPS :443| SG
+    SG --> UFW
+    UFW --> C
+    C -->|HTTP loopback| G
+    G --> A
+```
+
+### Public DNS
+`<DOMAIN> A 3.106.220.4` (AAAA tidak dibuat; tidak ada IPv6 global)
+
+### Public Ports
+- 22/tcp: SSH administration
+- 80/tcp: HTTP redirect / ACME challenge
+- 443/tcp: HTTPS
+
+### Private Host Ports
+- 127.0.0.1:8000: Gunicorn
+- 127.0.0.1:2019: Caddy admin API
+
+### TLS
+Dikelola otomatis oleh Caddy lewat CA publik (ACME). TLS berakhir di Caddy,
+lalu diteruskan ke Gunicorn lewat loopback.
+
+### Status
+Menunggu domain/subdomain; nilai `<DOMAIN>` diisi setelah tersedia.

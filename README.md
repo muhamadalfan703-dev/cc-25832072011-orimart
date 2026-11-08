@@ -34,7 +34,7 @@ flowchart LR
 
 ## Infrastructure
 - Ubuntu Server 24.04 LTS
-- 1 vCPU, 1 GB RAM, 20 GB disk
+- Target desain: 1 vCPU, 1 GB RAM, 20 GB disk (instance AWS aktual: 2 vCPU, sekitar 1 GB RAM)
 - Flask, Gunicorn (1 worker, 2 threads), systemd, Caddy, UFW
 
 ## Public Endpoint
