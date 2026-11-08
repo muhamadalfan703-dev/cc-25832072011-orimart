@@ -1,0 +1,14 @@
+Security Group: launch-wizard-1 (sg-06d5b604dd82fdd09)
+Instance: cc-m03-orimart
+Region: ap-southeast-2 (diperiksa melalui konsol AWS, 2026-11-09)
+
+Inbound rules:
+  TCP 22   0.0.0.0/0   SSH administration (key-only authentication)
+  TCP 80   0.0.0.0/0   HTTP (Caddy)
+
+Tidak ada rule untuk TCP 8000 (Gunicorn hanya listen pada 127.0.0.1).
+TCP 443 belum dibuka; menunggu domain/subdomain.
+
+Catatan risiko:
+  Port 22 terbuka untuk 0.0.0.0/0. Risiko dimitigasi dengan SSH
+  key-only, PermitRootLogin no, dan AllowUsers cloudstudent.
