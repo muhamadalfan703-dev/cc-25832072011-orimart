@@ -72,7 +72,7 @@ Rencana milestone berikutnya:
 - NFR-04 Secret tidak disimpan pada Git repository.
 - NFR-05 Health endpoint mengembalikan HTTP 200 saat sehat.
 - NFR-06 Deployment dapat direproduksi dari repository.
-- NFR-07 Arsitektur sesuai server 1 vCPU / 1 GB RAM.
+- NFR-07 Arsitektur sesuai batas desain 1 vCPU / 1 GB RAM (instance aktual: 2 vCPU).
 
 ## Scope M03
 
@@ -94,7 +94,7 @@ Out of scope:
 ## Constraints
 
 - Ubuntu Server 24.04 LTS
-- 1 vCPU
+- 1 vCPU (target desain; instance aktual t3.micro: 2 vCPU)
 - 1 GB RAM
 - 20 GB disk
 - public IPv4
