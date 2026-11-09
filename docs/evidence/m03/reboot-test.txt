@@ -1,15 +1,11 @@
-=== BOOT TERAKHIR ===
-2026-11-09 02:11:41
-
-=== RIWAYAT REBOOT ===
-reboot   system boot  7.0.0-1014-aws   Mon Nov  9 02:11   still running
-reboot   system boot  7.0.0-1014-aws   Mon Nov  9 00:52 - 02:11  (01:18)
-
-
-=== ENABLED ===
-enabled
-enabled
-
-=== ACTIVE ===
+=== boot time ===
+2026-11-09 18:02:49
+=== cc-m03 ===
 active
+enabled
+=== caddy ===
 active
+=== ufw ===
+Status: active
+=== health ===
+{"environment":"development","status":"ok","timestamp":"2026-11-09T11:05:03.397285+00:00"}

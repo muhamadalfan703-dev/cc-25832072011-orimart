@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OriMart</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>OriMart</h1>
+    <p class="tagline">Thrift fashion bermerek yang terverifikasi keasliannya.</p>
+    <ul class="chips">
+      
+      <li>Pakaian</li>
+      
+      <li>Sepatu</li>
+      
+      <li>Tas/Aksesoris Fashion</li>
+      
+    </ul>
+  </header>
+
+  <main>
+    <h2>Contoh Produk</h2>
+    <div class="grid">
+      
+      <article class="card">
+        <span class="badge ori">Ori</span>
+        <h3>Jaket Windbreaker</h3>
+        <p class="meta">Nike</p>
+        <p>Kondisi: Bagus</p>
+      </article>
+      
+      <article class="card">
+        <span class="badge ori">Ori</span>
+        <h3>Sepatu Chuck 70</h3>
+        <p class="meta">Converse</p>
+        <p>Kondisi: Sangat bagus</p>
+      </article>
+      
+      <article class="card">
+        <span class="badge ori">Ori</span>
+        <h3>Celana Jeans 501</h3>
+        <p class="meta">Levi&#39;s</p>
+        <p>Kondisi: Cukup</p>
+      </article>
+      
+    </div>
+    <p class="note">Data contoh statis. Lencana "Ori" berarti lolos pemeriksaan
+    bukti sesuai checklist verifikasi, bukan jaminan mutlak.</p>
+  </main>
+
+  <footer>
+    <p>OriMart &middot; M03 &middot; env: development</p>
+  </footer>
+</body>
+</html>
